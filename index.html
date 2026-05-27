@@ -74,7 +74,13 @@
 </section>
 
 <div class="stars"></div>
+<audio id="music" loop>
+  <source src="https://files.catbox.moe/zx6l8d.mp3" type="audio/mp3">
+</audio>
 
+<button class="music-btn" onclick="playMusic()">
+  🎵 Play Music
+</button>
 <button onclick="document.getElementById('music').play(https://files.catbox.moe/zx6l8d.mp3)">
 🎵 Play Music
 </button>
@@ -241,6 +247,12 @@ button:hover{
   position:absolute;
   z-index:-1;
 }
+  .music-btn{
+  position:fixed;
+  top:20px;
+  right:20px;
+  z-index:1000;
+}
   </style>
 
   <script>
@@ -274,5 +286,12 @@ for(let i = 0; i < 120; i++){
     Math.random() * 4 + "px";
 
   starsContainer.appendChild(star);
+}
+
+    function playMusic(){
+
+  document
+    .getElementById("music")
+    .play();
 }
   </script>
